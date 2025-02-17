@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sans-serif';
+  }
+  
+  body {
+    line-height: 1.6;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #004d99;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    font-size: 12px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .logo h1 {
+    font-size: 20px;
+  }
+  
+  nav .nav-links {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 25px; /* Changed font size to 14px */
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dropdown Styles */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    background-color: #0073e6;
+    border-radius: 4px;
+    padding: 10px 0;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-menu li {
+    padding: 5px 15px;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #005bb5;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Hero Section */
+  .hero {
+    margin-top: 80px;
+    height: 100vh;
+    background: linear-gradient(to right, #004d99, #0073e6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .donate-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+  
+  .donate-btn:hover {
+    background-color: #e65c00;
+    transform: translateY(-3px);
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #004d99;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  .logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    margin-right: 15px;
+  }
+  /* Banner Section with Image Slideshow */
+.hero {
+    margin-top: 80px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 2s ease-in-out;
+  }
+  
+  /* Text Overlay */
+  .slide-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+  
+  .slide-description {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+  
+  /* Animation */
+  @keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Slideshow Transition */
+  .hero {
+    animation: fade 10s infinite;
+  }
+  /* Mission and Vision Section */
+.mission-vision-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+  }
+  
+  .vision, .mission {
+    width: 45%;
+  }
+  
+  .vision h2, .mission h2 {
+    font-size: 5.2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .vision p, .mission p {
+    font-size: 1.8em;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  /* Core Values Section */
+  .core-values {
+    text-align: center;
+    padding: 30px;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .core-values h2 {
+    font-size: 3.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .core-values ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .core-values li {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #34495e;
+    padding: 10px 20px;
+    background-color: #d1ecf1;
+    border-radius: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .core-values li:hover {
+    transform: translateY(-5px);
+    background-color: #b3e5fc;
+  }
+  /* Services Section */
+.services-section {
+    padding: 60px;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .services-section h2 {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  /* Service Box Styles */
+/* Service Box Styles */
+/* Service Box Styles */
+.service-box {
+    width: 300px;
+    padding: 20px;
+    background: #000;  /* Changed background color to black */
+    color: #fff;  /* Text color changed to white for better contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Service Box Heading and Paragraph Color */
+  .service-box h3 {
+    color: #fff;  /* White heading text */
+  }
+  
+  .service-box p {
+    color: #ddd;  /* Light gray text for better readability */
+  }
+  
+  /* Remove Scroll Animation */
+  .reveal {
+    opacity: 1;
+    transform: translateX(0); /* No animation */
+  }
+  /* Team Section */
+/* Team Section */
+.team-section {
+    padding: 60px;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  
+  .team-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #2c3e50;
+  }
+  
+  /* Team Member Box */
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  
+  .team-member {
+    background-color: #28a745; /* Green background */
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  .team-member p {
+    font-size: 25px;
+    color: white;
+  }
+  /* Footer Section Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo img {
+    width: 150px; /* Adjust logo size */
+    margin-right: 30px;
+  }
+  
+  .footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .footer-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #28a745; /* Change color on hover */
+  }
+  
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+  }
